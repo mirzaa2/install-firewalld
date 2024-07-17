@@ -9,3 +9,4 @@ sudo systemctl staus firewalld
 sudo firewall-cmd --zone=public --list-all
 sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --permanent --zone=public --add-port=443/tcp
+sudo systemctl reload firewalld
