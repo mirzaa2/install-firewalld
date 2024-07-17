@@ -1,4 +1,11 @@
-# install firewalld
+#install firewalld
 pacman -S firewalld
 
-#
+#untuk menjalankan firewalld
+sudo systemctl enable firewalld
+sudo systemctl staus firewalld
+
+#untuk membuat memilihat zone list, dan menambahkan ports dan sever
+sudo firewall-cmd --zone=public --list-all
+sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --permanent --zone=public --add-port=443/tcp
